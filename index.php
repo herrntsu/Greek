@@ -43,22 +43,84 @@
             </div>
 
             <div class="timeline">
-                <span>2024 — PRESENT</span>
-                Senior Frontend Engineer, Accessibility · Klaviyo
+                 <div class="timeline-container">
+                    <div class="date">2024 — PRESENT</div>
+                    <div class="content">
+                    <h3>Senior Frontend Engineer, Accessibility &middot; Klaviyo</h3>
+                    <p>
+                        Build and maintain critical components used to construct Klaviyo's frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Storybook</span>
+                    </div>
+                    </div>
+                </div>
+
+                 <div class="timeline-container">
+                    <div class="date">2024 — PRESENT</div>
+                    <div class="content">
+                    <h3>Senior Frontend Engineer, Accessibility &middot; Klaviyo</h3>
+                    <p>
+                        Build and maintain critical components used to construct Klaviyo's frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Storybook</span>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="date">2024 — PRESENT</div>
+                    <div class="content">
+                    <h3>Senior Frontend Engineer, Accessibility &middot; Klaviyo</h3>
+                    <p>
+                        Build and maintain critical components used to construct Klaviyo's frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Storybook</span>
+                    </div>
+                    </div>
+                </div>
             </div>
-            
+
 
 
         </div>
     </div>
    
-
 <script>
-    document.addEventListener("mousemove", (e) => {
-        document.documentElement.style.setProperty('--mouse-x', e.clientX + 'px');
-        document.documentElement.style.setProperty('--mouse-y', e.clientY + 'px');
-    });
+document.addEventListener("DOMContentLoaded", function() {
+    const timelineContainers = document.querySelectorAll('.timeline-container');
 
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.6 });
+
+    timelineContainers.forEach(container => {
+        observer.observe(container);
+    });
+});
+
+document.addEventListener("mousemove", (e) => {
+    const x = (e.clientX / window.innerWidth) * 100; // Normalize to percentage
+    const y = ((e.clientY + window.scrollY) / document.documentElement.scrollHeight) * 100; // Normalize with scroll offset
+
+    document.documentElement.style.setProperty("--mouse-x", x + "%");
+    document.documentElement.style.setProperty("--mouse-y", y + "%");
+});
 </script>
 </body>
 </html>
