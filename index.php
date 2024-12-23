@@ -28,6 +28,10 @@
                 <a href="#dos-and-donts">Do's and dont's</a>
                 <a href="#risks-and-rewards">Risks and Rewards</a>
 
+                <a href="#how-to">How to start?</a>
+                <a href="#dos-and-donts">Do's and dont's</a>
+                <a href="#risks-and-rewards">Risks and Rewards</a>
+
             </div>
 
             <div class="social-icons">
