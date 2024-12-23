@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -7,25 +13,18 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
   background-color: #0a192f;
   color: #ccd6f6;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 0;
-  height: 100vh;
-  background-color: #0b0f19;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-  color: white;
+  font-family: "Space Mono", serif;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .spotlight {
@@ -33,13 +32,17 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.2) 100px, rgba(0, 0, 0, 0.336) 200px);
+  height: 250vh;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(248, 248, 248, 0.538) 150px,
+      rgba(255, 255, 255, 0.225) 300px,
+      rgba(0, 0, 0, 0.8) 500px);
   pointer-events: none;
   z-index: 10;
   opacity: 0.1;
-  transition: background 0.1s;
+  transition: background 0.2s;
 }
+
 .menu {
   margin-top: 50px;
 }
@@ -52,7 +55,7 @@ body {
   text-decoration: none;
   margin-bottom: 10px;
   position: relative;
-  padding-left: 30px;
+  padding-left: 40px;
   transition: all 0.3s ease;
 }
 
@@ -61,16 +64,15 @@ body {
   position: absolute;
   left: 0;
   top: 50%;
-  width: 20px;
+  width: 30px;
   height: 1px;
-  background-color: transparent;
-  transform: translateY(-50%);
+  background-color: #ccd6f6;
+  transform: translateY(-100%);
   transition: all 0.3s ease;
 }
 
 .menu a:hover::before,
 .menu a.active::before {
-  background-color: #ccd6f6;
   width: 40px;
 }
 
@@ -82,16 +84,23 @@ body {
 }
 
 .container {
+  position: static;
   display: flex;
   justify-content: space-between;
   padding: 40px;
   max-width: 1200px;
   margin: auto;
   gap: 100px;
+  height: auto;
+  min-height: 100vh;
+  overflow: visible;
 }
 
 .left-column {
   flex: 1;
+  position: sticky;
+  top: 40px;
+  align-self: flex-start;
 }
 
 .right-column {
@@ -99,10 +108,11 @@ body {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 88px;
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 20px;
+  font-family: "Roboto Slab", serif;
 }
 
 h2 {
@@ -116,38 +126,29 @@ p {
   color: #8892b0;
 }
 
-.menu {
-  margin-top: 50px;
-}
-
-.menu a {
-  display: block;
-  font-size: 16px;
-  color: #8892b0;
-  text-decoration: none;
-  margin-bottom: 10px;
-}
-
-.menu a.active {
-  color: #ffffff;
-  font-weight: bold;
-}
-
 .social-icons {
   margin-top: 50px;
   display: flex;
   gap: 20px;
 }
 
-.social-icons img {
-  width: 24px;
-  height: 24px;
+.social-icons a {
+  color: #ccd6f6;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
 }
 
 .timeline {
   margin-top: 50px;
   font-size: 14px;
   color: #8892b0;
+  position: relative;
+  z-index: 0;
+  /* Ensure this is lower than the .spotlight z-index */
 }
 
 .timeline span {

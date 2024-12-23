@@ -4,24 +4,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotlight Effect</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Frontend Layout Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="spotlight"></div>
-    <div class="content">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hover around to see the spotlight effect!</p>
+    <div class="container">
+        <div class="left-column">
+            <div class="left-header">
+                <h1>Memecoin</h1>
+                <h2>Cryptocurrency</h2>
+                <p>I build accessible, pixel-perfect digital experiences for the web.</p>
+            </div>
+
+            <div class="menu">
+                <a href="#about" class="active">Introduction</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#how-it-started">How it started</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="#" class="text-light"><i class="bi bi-github"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-code-slash"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-book"></i></a>
+            </div>
+        </div>
+        <div class="right-column">
+            <section id="about" class="about ">
+                <div class="right-header">
+
+                    <p>Memecoins are a type of cryptocurrency that often starts as a joke or parody, driven by internet
+                        culture and memes. Unlike traditional cryptocurrencies like Bitcoin or Ethereum, which are
+                        designed to serve specific purposes such as decentralized finance or smart contracts, memecoins
+                        often have little to no inherent utility or technological innovation. Despite this, they have
+                        gained massive popularity and market attention. This phenomenon is a testament to the influence
+                        of social media, viral internet trends, and the speculative nature of the cryptocurrency market.
+                    </p>
+
+                    <p>Memecoins began to gain traction in the cryptocurrency space with Dogecoin in 2013. Created by
+                        software engineers Billy Markus and Jackson Palmer as a joke based on the popular Shiba Inu dog
+                        meme from the internet, Dogecoin became a symbol of fun and lightheartedness within the crypto
+                        community. Initially, it had little value, but thanks to its active community and occasional
+                        celebrity endorsements (including Elon Musk), Dogecoin went on to achieve multi-billion-dollar
+                        valuations.</p>
+
+                    <p>Following the success of Dogecoin, a variety of other memecoins emerged, including Shiba Inu
+                        (often referred to as the "Dogecoin killer"), SafeMoon, and more. These coins typically ride the
+                        wave of viral trends, influencer endorsements, and social media hype rather than being driven by
+                        technological advancements or real-world use cases.
+                    </p>
+
+                    <p>In my spare time, I’m usually climbing, reading, hanging out with my wife and two cats, or
+                        running
+                        around Hyrule searching for Korok seeds.</p>
+                </div>
+            </section>
+            <section id="timeline">
+                <div class="timeline">
+                    <span>2024 — PRESENT</span>
+                    Senior Frontend Engineer, Accessibility · Klaviyo
+                </div>
+            </section>
+            <div class="right-header">
+                <p>I'm a developer passionate about crafting accessible, pixel-perfect user interfaces that blend
+                    thoughtful design with robust engineering. My favorite work lies at the intersection of design and
+                    development, creating experiences that not only look great but are meticulously built for
+                    performance and usability.</p>
+
+                <p>Currently, I'm a Senior Front-End Engineer at <strong>Klaviyo</strong>, specializing in
+                    accessibility. I contribute to the creation and maintenance of UI components that power Klaviyo’s
+                    frontend, ensuring our platform meets web accessibility standards and best practices to deliver an
+                    inclusive user experience.</p>
+
+                <p>In the past, I've had the opportunity to develop software across a variety of settings — from
+                    <strong>advertising agencies</strong> and <strong>large corporations</strong> to
+                    <strong>start-ups</strong> and <strong>small digital product studios</strong>. Additionally, I also
+                    released a <strong>comprehensive video course</strong> a few years ago, guiding learners through
+                    building a web app with the Spotify API.
+                </p>
+
+                <p>In my spare time, I’m usually climbing, reading, hanging out with my wife and two cats, or running
+                    around Hyrule searching for Korok seeds.</p>
+            </div>
+
+
+
+        </div>
     </div>
-    <script src="script.js"></script>
+
+
+    <script>
+        document.addEventListener("mousemove", (e) => {
+            const x = (e.clientX / window.innerWidth) * 100; // Normalize to percentage
+            const y = ((e.clientY + window.scrollY) / document.documentElement.scrollHeight) * 100; // Normalize with scroll offset
+
+            document.documentElement.style.setProperty("--mouse-x", x + "%");
+            document.documentElement.style.setProperty("--mouse-y", y + "%");
+        });
+
+        // Select all menu links
+        const menuLinks = document.querySelectorAll(".menu a");
+        const sections = document.querySelectorAll("section");
+        // Add click event listener to each link
+        menuLinks.forEach((link) => {
+            link.addEventListener("click", (e) => {
+                // Prevent default link behavior if needed
+                // e.preventDefault();
+
+                // Remove active class from all links
+                menuLinks.forEach((item) => item.classList.remove("active"));
+
+                // Add active class to the clicked link
+                e.target.classList.add("active");
+            });
+        });
+
+        // Create an IntersectionObserver
+        const observerOptions = {
+            root: null, // Observe within the viewport
+            threshold: 0.6, // 60% of the section should be visible to trigger
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Remove 'active' class from all menu links
+                    menuLinks.forEach((link) => link.classList.remove("active"));
+
+                    // Add 'active' class to the link pointing to the current section
+                    const activeLink = document.querySelector(`.menu a[href="#${entry.target.id}"]`);
+                    if (activeLink) activeLink.classList.add("active");
+                }
+            });
+        }, observerOptions);
+
+        // Observe each section
+        sections.forEach((section) => observer.observe(section));
+    </script>
 </body>
 
 </html>
-<script>
-    document.addEventListener("mousemove", (e) => {
-        document.documentElement.style.setProperty('--mouse-x', e.clientX + 'px');
-        document.documentElement.style.setProperty('--mouse-y', e.clientY + 'px');
-    });
-
-</script>
