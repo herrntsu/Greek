@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-    <title>Frontend Layout Clone</title>
+    <title>Memecoin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
@@ -20,7 +20,10 @@
             <div class="menu">
                 <a href="#right-header" class="active" id="about-link">About</a>
                 <a href="#timeline" id="timeline-link">Timeline</a>
-                <a href="#">Projects</a>
+                <a href="#how-to">How to start?</a>
+                <a href="#dos-and-donts">Do's and dont's</a>
+                <a href="#risks-and-rewards">Risks and Rewards</a>
+
             </div>
 
             <div class="social-icons">
@@ -35,9 +38,13 @@
             <div class="right-header" id="right-header">
                 <p>Memecoins are cryptocurrencies inspired by internet memes and humor. They often start as jokes but can grow into assets with large communities and significant market value. Their popularity stems from playful origins and viral online trends.</p>
 
-                <p>The memecoin journey began in December 2013 with <strong>Dogecoin</strong>, created by Billy Markus and Jackson Palmer. Based on the "Doge" meme featuring a Shiba Inu, Dogecoin gained attention for its lighthearted branding and charitable causes.</p>
+                <p>The memecoin journey began in December 2013 with <strong><span class="hover-cursor-container">
+            <a href="#" title="Dogecoin">Dogecoin</a>
+        </span></strong>, created by Billy Markus and Jackson Palmer. Based on the "Doge" meme featuring a Shiba Inu, Dogecoin gained attention for its lighthearted branding and charitable causes.</p>
 
-                <p>Building on Dogecoin's success, <strong>Shiba Inu (SHIB)</strong> launched in 2020, branding itself as the "Dogecoin killer." It quickly gained popularity, forming an ecosystem of tokens and riding the 2021 crypto boom. Other memecoins, like <strong>PepeCoin</strong> and <strong>Floki Inu</strong>, followed suit.</p>
+                <p>Building on Dogecoin's success, <span class="hover-cursor-container shiba">
+            <a href="#" title="Shiba Inu">Shiba Inu (SHIB)</a>
+        </span> launched in 2020, branding itself as the "Dogecoin killer." It quickly gained popularity, forming an ecosystem of tokens and riding the 2021 crypto boom. Other memecoins, like <strong>PepeCoin</strong> and <strong>Floki Inu</strong>, followed suit.</p>
 
                 <p>Today, memecoins blend humor with speculative investing. While some question their utility, others view them as accessible tools for new investors, keeping them central to cryptocurrency discussions.</p>
             </div>
@@ -121,6 +128,49 @@
                     </div>
                 </div>
             </div>
+
+            <div class = "how-to-container" id = "how-to-container">
+                <div class = "how-to" id = "how-to">
+                    <p>Memecoins can be traded on many popular cryptocurrency exchanges, both centralized (like Binance, Coinbase, and Kraken) and decentralized (like Uniswap and PancakeSwap). To trade them, you would typically need to:</p>
+                    <p>
+                    Create a Cryptocurrency Wallet: You can store your memecoins in a digital wallet (such as MetaMask, Trust Wallet, or Coinbase Wallet).</p>
+                    <p>Buy Cryptocurrency: Most exchanges will allow you to buy other cryptocurrencies like Bitcoin or Ethereum. These can then be traded for memecoins.</p>
+                    <p>Use Decentralized Exchanges (DEXs): For some memecoins that aren’t listed on centralized exchanges, you’ll need to use decentralized platforms (DEXs). These exchanges let you swap tokens directly without an intermediary.</p>
+                    <p>Research: To discover new and emerging memecoins, you can visit platforms like CoinMarketCap or CoinGecko, which provide comprehensive lists of cryptocurrencies and their market data. Social media platforms, Reddit, and Twitter are also places where new memecoins are often discussed.</p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="dos-and-donts" id="dos-and-donts">
+                <div class="dos-and-donts" id="dos-and-donts">
+                    <h3>Do's</h3>
+                    <p><strong>Research Before Investing:</strong> While memecoins are often driven by hype, it’s essential to do at least some basic research into the coin’s community, history, and recent news.</p>
+                    <p><strong>Start Small:</strong>Due to the extreme volatility of memecoins, it’s wise to only invest money you’re prepared to lose. Start with a small portion of your portfolio.</p>
+                    <p><strong>Engage with the Community:</strong> Memecoins often have vibrant communities. Joining forums or social media groups can help you gauge sentiment and timing when buying or selling.</p>
+                    <p><strong>Monitor Market Trends:</strong> Price movements for memecoins can be highly erratic. Keeping an eye on price charts, trends, and social media discussions can help you make more informed decisions.</p>
+
+
+                    <h3>Dont's</h3>
+                    <p><strong>Don’t FOMO (Fear of Missing Out):</strong>Memecoins often surge in price due to hype, only to crash shortly after. Avoid chasing trends impulsively, as you might buy in at the peak and suffer heavy losses.</p>
+                    <p><strong>Don’t Ignore the Risks:</strong>Memecoins are speculative investments, and many lack fundamental utility. Be aware of the risks, including market manipulation, "pump and dump" schemes, and the potential for scams.</p>
+                    <p><strong>Avoid Investing More Than You Can Afford to Lose:</strong>Because of the high-risk nature of memecoins, never invest money that you can’t afford to lose. These coins can be volatile and unpredictable.</p>
+                    <p><strong>Don’t Rely Solely on Social Media Hype:</strong>While social media can drive the popularity of memecoins, don’t make investment decisions based only on hype. Make sure to assess the market from a broader perspective.</p>
+                    
+                </div>
+            </div>
+
+            <div class="risks-and-rewards" id="risks-and-rewards">
+                <div class="risks-and-rewards" id="risks-and-rewards">
+                    <h3>Risks</h3>
+                    <p><strong>High Volatility:</strong> Memecoins are notoriously volatile, with prices often fluctuating wildly in a short period. This can lead to both substantial gains and rapid losses.</p>
+                    <p><strong>Lack of Regulation:</strong> Many memecoins are not regulated or backed by any central authority, which increases the risk of fraud, scams, or "pump and dump" schemes.</p>
+                    <p><strong>Market Manipulation:</strong>Memecoins can be subject to manipulation by influencers or large holders ("whales"), making them unpredictable and risky for smaller investors.</p>
+                    <p><strong>Uncertain Future:</strong>Since memecoins often lack utility, their long-term value is questionable. They may fade into obscurity as interest wanes.</p>
+                    <h3>Rewards</h3>
+                    <p><strong>Potential for High Returns:</strong>If you manage to get in early and sell during a price surge, the returns can be immense. Memecoins like Dogecoin and Shiba Inu have turned early investors into millionaires.</p>
+                    <p><strong>Community and Culture:</strong>The thrill of being part of a meme-based movement and seeing something rise purely due to community-driven efforts can be rewarding in itself.</p>
+                    <p><strong>Speculative Gains:</strong>For those with the right timing and risk tolerance, memecoins offer a speculative investment opportunity that has the potential for significant short-term profits.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -151,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Update active menu item on scroll
-    const sections = document.querySelectorAll('.right-header, .timeline');
+    const sections = document.querySelectorAll('.how-to, .risks-and-rewards, .right-header, .timeline, .dos-and-donts');
     const menuLinks = document.querySelectorAll('.menu a');
 
     window.addEventListener('scroll', () => {
@@ -181,5 +231,7 @@ document.addEventListener("mousemove", (e) => {
     document.documentElement.style.setProperty("--mouse-y", y + "%");
 });
 </script>
+
+<script src="memecoin-ani.js"></script>
 </body>
 </html>
