@@ -101,6 +101,7 @@ body {
 }
 
 .container {
+  position: static;
   display: flex;
   justify-content: space-between;
   padding: 40px;
@@ -190,15 +191,16 @@ p {
   font-size: 14px;
   color: var(--secondary-text-color);
   position: relative;
-  z-index: 0; /* Ensure this is lower than the .spotlight z-index */
+  z-index: 0;
+  /* Ensure this is lower than the .spotlight z-index */
   background-color: var(--timeline-background);
-  transition: background-color 0.5s ease; /* Add transition for background-color */
+  transition: background-color 0.5s ease;
+  /* Add transition for background-color */
 }
 
 .timeline:hover {
-  background-color: var(
-    --timeline-background-hover
-  ); /* Change background-color on hover */
+  background-color: var(--timeline-background-hover);
+  /* Change background-color on hover */
 }
 
 .timeline-container {
@@ -208,32 +210,41 @@ p {
   border-radius: 8px;
   width: 600px;
   transition: box-shadow 0.2s ease, background-color 0.3s ease;
-  pointer-events: auto; /* Ensure pointer events are enabled */
+  pointer-events: auto;
+  /* Ensure pointer events are enabled */
   position: relative;
-  z-index: 1; /* Ensure this is higher than the .timeline */
-  border-top: 1px solid transparent; /* Add transparent border initially */
-  background-color: var(
-    --timeline-background
-  ); /* Ensure background-color is set */
-  opacity: 0; /* Initially hidden */
-  transform: translateY(20px); /* Initial position */
+  z-index: 1;
+  /* Ensure this is higher than the .timeline */
+  border-top: 1px solid transparent;
+  /* Add transparent border initially */
+  background-color: var(--timeline-background);
+  /* Ensure background-color is set */
+  opacity: 0;
+  /* Initially hidden */
+  transform: translateY(20px);
+  /* Initial position */
   transition: background-color 0.1s ease, opacity 0.6s ease-out,
-    transform 0.6s ease-out; /* Transition for fade-in effect */
+    transform 0.6s ease-out;
+  /* Transition for fade-in effect */
 }
 
 .timeline-container.visible {
-  opacity: 1; /* Fully visible */
-  transform: translateY(0); /* Move to original position */
+  opacity: 1;
+  /* Fully visible */
+  transform: translateY(0);
+  /* Move to original position */
 }
 
 .timeline-container:hover {
   box-shadow: 0 6px 10px var(--timeline-hover-shadow);
   background-color: var(--timeline-hover-background);
-  border-top: 1px solid rgba(219, 217, 217, 0.1); /* Change border color on hover */
+  border-top: 1px solid rgba(219, 217, 217, 0.1);
+  /* Change border color on hover */
 }
 
 .timeline-container:hover h3 {
-  color: var(--link-color); /* Change this to the desired color */
+  color: var(--link-color);
+  /* Change this to the desired color */
 }
 
 .content h3 {
@@ -247,10 +258,13 @@ p {
   margin-right: 30px;
   white-space: nowrap;
   padding: 0px 22px 0px 0px;
-  flex-shrink: 0; /* Prevent shrinking */
-  width: 100px; /* Set a fixed width */
+  flex-shrink: 0;
+  /* Prevent shrinking */
+  width: 100px;
+  /* Set a fixed width */
   align-items: center;
 }
+
 .content {
   flex: 1;
 }
