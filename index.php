@@ -8,6 +8,7 @@
     <title>Memecoin</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="../img/spinning_coin.gif" type=" image/icon type">
 </head>
 
 <body>
@@ -27,19 +28,23 @@
                 <a href="#how-to">How to start?</a>
                 <a href="#dos-and-donts">Do's and dont's</a>
                 <a href="#risks-and-rewards">Risks and Rewards</a>
-
-                <a href="#how-to">How to start?</a>
-                <a href="#dos-and-donts">Do's and dont's</a>
-                <a href="#risks-and-rewards">Risks and Rewards</a>
-
             </div>
 
             <div class="social-icons">
+                <a href="https://x.com/rincryptoNFT" target="_blank" class="text-light"><i
+                        class="bi bi-twitter"></i></a>
+                <a href="https://earn.superteam.fun/t/rinnnus/" target="_blank" class="text-light"><i
+                        class="bi bi-person-circle"></i></a>
                 <a href="#" class="text-light"><i class="bi bi-github"></i></a>
-                <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
-                <a href="#" class="text-light"><i class="bi bi-code-slash"></i></a>
                 <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
                 <a href="#" class="text-light"><i class="bi bi-book"></i></a>
+            </div>
+            <div>
+                <p>Submitted by <a href="https://earn.superteam.fun/t/rinnnus/" target="_blank"><strong>Rin</strong></a>
+                    for
+                    the <a href="https://earn.superteam.fun/listings/bounty/a-meme-a-day/"><strong>A Meme A Day
+                            Bounty</strong></a>
+                </p>
             </div>
         </div>
         <div class="right-column">
