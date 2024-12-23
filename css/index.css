@@ -1,9 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+:root {
+  --background-color: #0a192f;
+  --text-color: #ccd6f6;
+  --secondary-text-color: #8892b0;
+  --highlight-color: #ffffff;
+  --link-color: #38bdf8;
+  --tag-background-color: #334155;
+  --date-color: #94a3b8;
+  --timeline-hover-background: rgba(30, 41, 59, 0.9);
+  --timeline-hover-shadow: rgba(38, 21, 86, 0.15);
+  --timeline-background: rgba(10, 25, 47, 1);
+  --timeline-background-hover: rgba(10, 25, 47, 0.5);
+}
+
 html {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
+  overflow: auto;
 }
 
 * {
@@ -13,8 +27,8 @@ html {
 }
 
 body {
-  background-color: #0a192f;
-  color: #ccd6f6;
+  background-color: var(--background-color);
+  color: var(--text-color);
   line-height: 1.6;
   font-family: "Space Mono", serif;
   font-weight: 400;
@@ -24,7 +38,7 @@ body {
   align-items: center;
   position: relative;
   margin: 0;
-  overflow-x: hidden;
+  width: 100%;
 }
 
 .spotlight {
@@ -32,7 +46,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 250vh;
+  height: 400vh;
   background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
       rgba(248, 248, 248, 0.538) 150px,
       rgba(255, 255, 255, 0.225) 300px,
@@ -50,13 +64,14 @@ body {
 .menu a {
   display: flex;
   align-items: center;
-  font-size: 16px;
-  color: #8892b0;
+  font-size: 14px;
+  color: var(--secondary-text-color);
   text-decoration: none;
   margin-bottom: 10px;
   position: relative;
-  padding-left: 40px;
-  transition: all 0.3s ease;
+  padding-left: 45px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
 }
 
 .menu a::before {
@@ -64,23 +79,23 @@ body {
   position: absolute;
   left: 0;
   top: 50%;
-  width: 30px;
+  width: 35px;
   height: 1px;
-  background-color: #ccd6f6;
+  background-color: var(--text-color);
   transform: translateY(-100%);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .menu a:hover::before,
 .menu a.active::before {
-  width: 40px;
+  width: 70px;
 }
 
 .menu a:hover,
 .menu a.active {
-  color: #ffffff;
+  color: var(--highlight-color);
   font-weight: bold;
-  padding-left: 50px;
+  padding-left: 80px;
 }
 
 .container {
@@ -92,67 +107,169 @@ body {
   margin: auto;
   gap: 100px;
   height: auto;
-  min-height: 100vh;
-  overflow: visible;
 }
 
 .left-column {
-  flex: 1;
+  flex: 2;
   position: sticky;
   top: 40px;
   align-self: flex-start;
 }
 
 .right-column {
-  flex: 1;
+  flex: 2;
+}
+
+.right-header {
+  padding-top: 36px;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 h1 {
   font-size: 88px;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--highlight-color);
   margin-bottom: 20px;
   font-family: "Roboto Slab", serif;
 }
 
 h2 {
   font-size: 24px;
-  color: #8892b0;
+  color: var(--secondary-text-color);
   margin-bottom: 20px;
 }
 
 p {
   margin-bottom: 15px;
-  color: #8892b0;
+  color: var(--secondary-text-color);
 }
 
 .social-icons {
-  margin-top: 50px;
+  margin-top: 120px;
   display: flex;
   gap: 20px;
 }
 
 .social-icons a {
-  color: #ccd6f6;
+  color: var(--text-color);
   font-size: 20px;
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #ffffff;
+  color: var(--highlight-color);
 }
 
 .timeline {
-  margin-top: 50px;
+  gap: 10px;
+  display: grid;
+  margin-top: 120px;
   font-size: 14px;
-  color: #8892b0;
+  color: var(--secondary-text-color);
   position: relative;
   z-index: 0;
   /* Ensure this is lower than the .spotlight z-index */
+  background-color: var(--timeline-background);
+  transition: background-color 0.5s ease;
+  /* Add transition for background-color */
 }
 
-.timeline span {
-  display: block;
-  font-weight: bold;
-  color: #ffffff;
+.timeline:hover {
+  background-color: var(--timeline-background-hover);
+  /* Change background-color on hover */
+}
+
+.timeline-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 8px;
+  width: 600px;
+  transition: box-shadow 0.2s ease, background-color 0.3s ease;
+  pointer-events: auto;
+  /* Ensure pointer events are enabled */
+  position: relative;
+  z-index: 1;
+  /* Ensure this is higher than the .timeline */
+  border-top: 1px solid transparent;
+  /* Add transparent border initially */
+  background-color: var(--timeline-background);
+  /* Ensure background-color is set */
+  opacity: 0;
+  /* Initially hidden */
+  transform: translateY(20px);
+  /* Initial position */
+  transition: background-color 0.1s ease, opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+  /* Transition for fade-in effect */
+}
+
+.timeline-container.visible {
+  opacity: 1;
+  /* Fully visible */
+  transform: translateY(0);
+  /* Move to original position */
+}
+
+.timeline-container:hover {
+  box-shadow: 0 6px 10px var(--timeline-hover-shadow);
+  background-color: var(--timeline-hover-background);
+  border-top: 1px solid rgba(219, 217, 217, 0.1);
+  /* Change border color on hover */
+}
+
+.timeline-container:hover h3 {
+  color: var(--link-color);
+  /* Change this to the desired color */
+}
+
+.content h3 {
+  color: var(--highlight-color);
+  margin: 0 0 10px 0;
+}
+
+.date {
+  font-size: 12px;
+  color: var(--date-color);
+  margin-right: 30px;
+  white-space: nowrap;
+  padding: 0px 22px 0px 0px;
+  flex-shrink: 0;
+  /* Prevent shrinking */
+  width: 100px;
+  /* Set a fixed width */
+  align-items: center;
+}
+
+.content {
+  flex: 1;
+}
+
+.content p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.tag {
+  background-color: var(--tag-background-color);
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  color: var(--link-color);
+}
+
+strong {
+  color: var(--highlight-color);
+}
+
+strong:hover {
+  color: var(--link-color);
+  transition: color 0.3s ease;
 }
