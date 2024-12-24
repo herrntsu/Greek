@@ -460,7 +460,7 @@ strong:hover {
     flex-direction: column;
     gap: 1.5rem;
     padding: 1rem;
-    margin-left: 3rem;
+    margin-left: 4rem;
     /* Added even more margin to the left */
     margin-right: 0rem;
     /* Reduced margin on the right further */
@@ -519,7 +519,7 @@ strong:hover {
     flex-direction: column;
     margin-left: 4rem;
     /* Added even more margin to the left */
-    margin-right: 0.5rem;
+    margin-right: 0rem;
     /* Reduced margin on the right further */
   }
 
@@ -559,7 +559,7 @@ strong:hover {
     gap: 2rem;
     margin-left: 6rem;
     /* Added even more margin to the left */
-    margin-right: 1rem;
+    margin-right: 0rem;
     /* Reduced margin on the right further */
   }
 
