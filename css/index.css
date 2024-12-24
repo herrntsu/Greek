@@ -446,13 +446,14 @@ strong:hover {
   }
 }
 
-/* Media Queries */
 /* Small screens (max width 600px) */
 @media (max-width: 600px) {
   .body {
     margin: 0 auto;
     max-width: 430px;
     padding: 1rem;
+    text-align: center;
+    /* Center content */
   }
 
   .container {
@@ -504,6 +505,8 @@ strong:hover {
     margin: 0 auto;
     max-width: 768px;
     padding: 1rem;
+    text-align: center;
+    /* Center content */
   }
 
   .container {
@@ -538,6 +541,8 @@ strong:hover {
   .body {
     margin: 0 auto;
     max-width: 1080px;
+    text-align: center;
+    /* Center content */
   }
 
   .container {
