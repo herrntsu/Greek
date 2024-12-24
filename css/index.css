@@ -465,7 +465,7 @@ strong:hover {
   .left-column,
   .right-column {
     flex: 1;
-    width: 100%;
+    width: 80%;
     position: static;
   }
 
@@ -551,13 +551,13 @@ strong:hover {
     gap: 2rem;
   }
 
-  .left-column {
+  /* .left-column {
     width: 50%;
   }
 
   .right-column {
     width: 50%;
-  }
+  } */
 
   h1 {
     font-size: 60px;
