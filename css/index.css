@@ -445,3 +445,83 @@ strong:hover {
     border-color: rgb(255, 255, 255)
   }
 }
+
+/* Media Queries */
+/* Media Queries */
+
+/* Small screens (max width 600px) */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    /* Stack columns vertically */
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .left-column,
+  .right-column {
+    flex: 1;
+    width: 100%;
+    /* Make columns full-width */
+    position: static;
+  }
+
+  .menu a {
+    font-size: 12px;
+    padding-left: 10px;
+    display: none;
+  }
+
+  .spotlight {
+    display: none;
+  }
+
+  h1 {
+    font-size: 40px;
+    /* Smaller header */
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .timeline-container {
+    width: 100%;
+    /* Make timeline containers fit screen width */
+    padding: 15px;
+  }
+}
+
+/* Medium screens (max width 768px) */
+@media (max-width: 768px) {
+  .container {
+    gap: 4rem;
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .timeline-container {
+    width: 90%;
+    /* Reduce container width slightly */
+  }
+
+  .social-icons {
+    gap: 10px;
+    /* Reduce spacing between icons */
+  }
+
+  .left-column {
+    position: static;
+
+  }
+}
+
+/* Large screens (default layout applies) */
