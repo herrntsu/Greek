@@ -451,6 +451,11 @@ strong:hover {
 
 /* Small screens (max width 600px) */
 @media (max-width: 600px) {
+  .body {
+    max-width: 1080px;
+    max-height: 1920px;
+  }
+
   .container {
     flex-direction: column;
     /* Stack columns vertically */
