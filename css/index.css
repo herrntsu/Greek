@@ -447,19 +447,17 @@ strong:hover {
 }
 
 /* Media Queries */
-/* Media Queries */
-
 /* Small screens (max width 600px) */
 @media (max-width: 600px) {
   .body {
-    max-width: 1080px;
-    max-height: 1920px;
+    margin: 0 auto;
+    max-width: 430px;
+    padding: 1rem;
   }
 
   .container {
     flex-direction: column;
-    /* Stack columns vertically */
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 1rem;
   }
 
@@ -467,7 +465,6 @@ strong:hover {
   .right-column {
     flex: 1;
     width: 100%;
-    /* Make columns full-width */
     position: static;
   }
 
@@ -482,8 +479,8 @@ strong:hover {
   }
 
   h1 {
-    font-size: 40px;
-    /* Smaller header */
+    font-size: 32px;
+    /* Adjusted for smaller screens */
   }
 
   h2 {
@@ -492,41 +489,80 @@ strong:hover {
 
   p {
     font-size: 14px;
+    line-height: 1.5;
   }
 
   .timeline-container {
     width: 100%;
-    /* Make timeline containers fit screen width */
     padding: 15px;
   }
 }
 
 /* Medium screens (max width 768px) */
 @media (max-width: 768px) {
+  .body {
+    margin: 0 auto;
+    max-width: 768px;
+    padding: 1rem;
+  }
+
   .container {
-    gap: 4rem;
+    gap: 2rem;
     padding: 2rem;
     flex-direction: column;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .timeline-container {
+    width: 90%;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .left-column {
+    position: static;
+  }
+}
+
+/* Large screens (default layout applies) */
+@media (min-width: 769px) {
+  .body {
+    margin: 0 auto;
+    max-width: 1080px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .left-column {
+    width: 50%;
+  }
+
+  .right-column {
+    width: 50%;
   }
 
   h1 {
     font-size: 60px;
   }
 
-  .timeline-container {
-    width: 90%;
-    /* Reduce container width slightly */
+  h2 {
+    font-size: 24px;
   }
 
-  .social-icons {
-    gap: 10px;
-    /* Reduce spacing between icons */
-  }
-
-  .left-column {
-    position: static;
-
+  p {
+    font-size: 16px;
   }
 }
-
-/* Large screens (default layout applies) */
