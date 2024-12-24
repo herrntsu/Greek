@@ -513,7 +513,6 @@ strong:hover {
     gap: 2rem;
     padding: 2rem;
     flex-direction: column;
-    justify-content: center;
   }
 
   h1 {
