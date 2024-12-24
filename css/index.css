@@ -40,7 +40,10 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
+
+
 }
+
 
 .spotlight {
   position: absolute;
@@ -114,6 +117,7 @@ body {
     text-decoration: none;
     color: white;
   }
+
 }
 
 .left-column {
@@ -389,6 +393,10 @@ strong:hover {
   padding: 4rem 0rem 6rem 0rem;
 }
 
+.risks-and-rewards-container .whales {
+  padding: 4rem 0rem 6rem 0rem;
+}
+
 
 /* .dos {
   color: rgb(216, 213, 31);
@@ -397,3 +405,43 @@ strong:hover {
 .donts {
   color: rgb(223, 47, 208);
 } */
+
+
+/* Typerwriter Keyframes */
+.left-header h1 {
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  overflow: hidden;
+  border-right: .15em solid rgb(241, 241, 241);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 3px;
+  animation:
+    typing 1s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: rgb(255, 255, 255)
+  }
+}
