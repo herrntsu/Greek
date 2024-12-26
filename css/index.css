@@ -412,24 +412,21 @@ strong:hover {
   color: #fff;
   font-family: "Roboto Slab", serif;
   overflow: hidden;
-  border-right: .15em solid rgb(241, 241, 241);
+  border-right: 0.15em solid rgb(241, 241, 241);
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 3px;
-  animation:
-    typing 1s steps(30, end),
-    blink-caret .5s step-end infinite;
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s infinite;
 }
-
 
 /* The typing effect */
 @keyframes typing {
   from {
-    width: 0
+    width: 0;
   }
 
   to {
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -438,13 +435,36 @@ strong:hover {
 
   from,
   to {
-    border-color: transparent
+    border-color: transparent;
   }
 
   50% {
-    border-color: rgb(255, 255, 255)
+    border-color: rgb(255, 255, 255);
   }
 }
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@-moz-keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Repeat for other keyframes and properties as needed */
+
 
 /* Small screens (max width 600px) */
 @media (max-width: 600px) {
